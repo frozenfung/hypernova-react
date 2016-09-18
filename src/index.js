@@ -19,7 +19,7 @@ export const renderReact = (name, component) => hypernova({
         const { node, data } = payload;
         const element = React.createElement(component, data);
         ReactDOM.render(element, node);
-      })
+      });
     }
 
     return component;
