@@ -15,7 +15,7 @@ export const renderReact = (name, component) => hypernova({
     const payloads = load(name);
 
     if (payloads) {
-      Array.prototype.map.call(payloads, (payload) => {
+      payloads.map((payload) => {
         const { node, data } = payload;
         const element = React.createElement(component, data);
         ReactDOM.render(element, node);
